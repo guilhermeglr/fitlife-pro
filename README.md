@@ -160,7 +160,7 @@ ANTHROPIC\_API\_KEY=sua-chave-anthropic
 
 \- GitHub: \[@guilhermeglr25](https://github.com/guilhermeglr25)
 
-\- LinkedIn: \[Seu perfil LinkedIn]
+\- LinkedIn: \[[Seu perfil LinkedIn](https://www.linkedin.com/in/guilherme-leite-reginato-894aa9228/)]
 
 
 
