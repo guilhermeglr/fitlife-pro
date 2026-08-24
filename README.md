@@ -1,180 +1,105 @@
-\# 🏋️‍♂️ FitLife Pro
+# 🏋️ FitLife Pro
 
+Aplicação web de acompanhamento fitness com inteligência artificial, desenvolvida para o mercado brasileiro.
 
+![React](https://img.shields.io/badge/React-18-blue)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-green)
+![Claude AI](https://img.shields.io/badge/Claude-AI%20Powered-purple)
+![PWA](https://img.shields.io/badge/PWA-Ready-orange)
 
-Aplicação web completa de acompanhamento fitness com inteligência artificial, desenvolvida para o mercado brasileiro.
-
-
-
-!\[React](https://img.shields.io/badge/React-18-blue)
-
-!\[Supabase](https://img.shields.io/badge/Supabase-Backend-green)
-
-!\[Claude AI](https://img.shields.io/badge/Claude-AI%20Powered-purple)
-
-
-
-\## 🚀 Funcionalidades
-
-
-
-\- 📊 \*\*Tracking Completo\*\*: Peso, refeições, treinos e progresso fotográfico
-
-\- 🤖 \*\*Coach de IA\*\*: Assistente inteligente powered by Claude API
-
-\- 💳 \*\*Sistema de Assinaturas\*\*: Free, Premium e Anual
-
-\- 📱 \*\*PWA Ready\*\*: Instalável em dispositivos móveis
-
-\- 🎯 \*\*Desafios e Metas\*\*: Sistema gamificado de conquistas
-
-\- 📈 \*\*Visualização de Progresso\*\*: Gráficos e estatísticas detalhadas
-
-\- 🔐 \*\*Autenticação Segura\*\*: Via Supabase Auth
-
-
-
-\## 🛠️ Tecnologias
-
-
-
-\*\*Frontend:\*\*
-
-\- React (via CDN)
-
-\- Tailwind CSS
-
-\- Chart.js
-
-\- Service Workers (PWA)
-
-
-
-\*\*Backend:\*\*
-
-\- Supabase (Auth + Database + Storage)
-
-\- Serverless Functions (Vercel)
-
-\- Anthropic Claude API
-
-
-
-\*\*Integrações:\*\*
-
-\- MercadoPago / PagSeguro (em desenvolvimento)
-
-\- Webhooks para processamento de pagamentos
-
-
-
-\## 📦 Como Executar Localmente
-
-```bash
-
-\# Clone o repositório
-
-git clone https://github.com/guilhermeglr25/fitlife-pro.git
-
-
-
-\# Entre na pasta
-
-cd fitlife-pro
-
-
-
-\# Instale um servidor local
-
-npm install -g http-server
-
-
-
-\# Execute
-
-http-server -p 8080
-
-
-
-\# Acesse no navegador
-
-http://localhost:8080
-
-```
-
-
-
-\## 🔐 Configuração de Ambiente
-
-
-
-Crie um arquivo `.env.local` na raiz com:
-
-```env
-
-SUPABASE\_URL=sua-url-supabase
-
-SUPABASE\_ANON\_KEY=sua-chave-supabase
-
-ANTHROPIC\_API\_KEY=sua-chave-anthropic
-
-```
-
-
-
-\## 🎯 Roadmap
-
-
-
-\- \[x] Sistema de tracking básico
-
-\- \[x] Integração com IA
-
-\- \[x] Sistema de assinaturas
-
-\- \[x] PWA com ícones multiplataforma
-
-\- \[ ] Integração completa com MercadoPago
-
-\- \[ ] Notificações push
-
-\- \[ ] Modo offline completo
-
-\- \[ ] Funcionalidades sociais
-
-
-
-\## 📱 Demo
-
-
-
-🔗 \[Ver aplicação ao vivo](https://fitlife-pro.vercel.app)
-
-
-
-\## 👨‍💻 Desenvolvedor
-
-
-
-\*\*Guilherme Reginato\*\*
-
-\- GitHub: \[@guilhermeglr25](https://github.com/guilhermeglr25)
-
-\- LinkedIn: \[[Seu perfil LinkedIn](https://www.linkedin.com/in/guilherme-leite-reginato-894aa9228/)]
-
-
-
-\## 📄 Licença
-
-
-
-Este projeto está sob a licença MIT.
-
-
+🔗 **[Ver aplicação ao vivo](https://fitlife-pro.vercel.app)**
 
 ---
 
+## Sobre o projeto
 
+O FitLife Pro nasceu da dificuldade de acompanhar treino e alimentação em
+aplicativos que não conversam entre si. A proposta é reunir peso, refeições,
+treinos e evolução no mesmo lugar, com um assistente de IA que interpreta os
+dados e orienta o usuário.
 
-⭐ Se este projeto foi útil, considere dar uma estrela!
+## Funcionalidades
 
+- **Tracking completo** — peso, refeições, treinos e progresso fotográfico
+- **Coach de IA** — assistente que analisa os dados via API da Anthropic
+- **Sistema de assinaturas** — planos Free, Premium e Anual
+- **PWA** — instalável no celular, com ícones para Android, iOS e Windows
+- **Desafios e metas** — sistema gamificado de conquistas
+- **Gráficos de evolução** — visualização do progresso ao longo do tempo
+- **Autenticação** — via Supabase Auth
+
+## Tecnologias
+
+**Frontend**
+- React (via CDN)
+- Tailwind CSS
+- Chart.js
+- Service Workers (PWA)
+
+**Backend**
+- Supabase — autenticação, banco de dados e storage
+- Funções serverless na Vercel
+- API da Anthropic (Claude)
+
+**Pagamentos**
+- MercadoPago com webhooks (em desenvolvimento)
+
+## Estrutura
+
+```
+api/          Funções serverless (chat com IA, assinaturas, webhooks)
+backend/      Servidor Node para desenvolvimento local
+frontend/     Ícones e assets do PWA
+src/          Integração com o Supabase
+index.html    Aplicação
+sw.js         Service Worker
+supabase-schema.sql   Esquema do banco
+```
+
+## Como executar localmente
+
+```bash
+git clone https://github.com/guilhermeglr/FitLifePro.git
+cd FitLifePro
+
+npm install -g http-server
+http-server -p 8080
+```
+
+Acesse `http://localhost:8080`.
+
+## Configuração
+
+Crie um arquivo `.env.local` na raiz:
+
+```
+SUPABASE_URL=sua-url-supabase
+SUPABASE_ANON_KEY=sua-chave-publica-supabase
+ANTHROPIC_API_KEY=sua-chave-anthropic
+```
+
+> A chave da Anthropic é usada apenas nas funções serverless, nunca no
+> navegador. A chave `anon` do Supabase é pública por natureza — a proteção
+> dos dados vem das políticas de Row Level Security configuradas no banco.
+
+## Roadmap
+
+- [x] Sistema de tracking básico
+- [x] Integração com IA
+- [x] Sistema de assinaturas
+- [x] PWA com ícones multiplataforma
+- [ ] Integração completa com MercadoPago
+- [ ] Notificações push
+- [ ] Modo offline completo
+- [ ] Funcionalidades sociais
+
+## Autor
+
+**Guilherme Reginato**
+
+- GitHub: [@guilhermeglr](https://github.com/guilhermeglr)
+- LinkedIn: [guilherme-leite-reginato](https://www.linkedin.com/in/guilherme-leite-reginato-894aa9228/)
+
+## Licença
+
+MIT — sinta-se livre para estudar, adaptar e reaproveitar.
